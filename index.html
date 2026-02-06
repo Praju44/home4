@@ -2,120 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Elegant Jewelry</title>
-
+  <title>Sport Stars 🌟</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #ffe0f0, #e0f7ff);
+      background: linear-gradient(to right, #ade6ff, #ffd3e0);
+      color: #333;
     }
 
     header {
-      background: #ff69b4;
+      background: #ff5757;
       color: white;
       text-align: center;
       padding: 25px;
     }
 
-    header h1 {
-      margin: 0;
+    nav {
+      padding: 12px;
+      background: white;
+      text-align: center;
+      border-bottom: 2px solid #ddd;
     }
 
-    .container {
-      padding: 30px;
+    nav button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      background: #ff758c;
+      color: #fff;
+    }
+
+    nav button:hover {
+      background: #ff4f6b;
+    }
+
+    .section {
+      display: none;
+      padding: 20px;
       text-align: center;
     }
 
-    .model {
-      max-width: 300px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    .active {
+      display: block;
     }
 
-    .jewelry-list {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
-
-    .item {
+    .player {
+      margin: 15px;
+      padding: 15px;
       background: white;
-      padding: 20px;
-      width: 200px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .item:hover {
-      transform: scale(1.05);
-      background: #fff0f8;
-    }
-
-    .item img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
       border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      display: inline-block;
+      width: 250px;
     }
 
     footer {
-      background: #ff69b4;
+      background: #ff5757;
       color: white;
       text-align: center;
       padding: 12px;
-      margin-top: 40px;
+      margin-top: 20px;
     }
+
   </style>
 
 </head>
 <body>
 
   <header>
-    <h1>✨ Elegant Jewelry ✨</h1>
-    <p>Beauty that shines with you</p>
+    <h1>🏆 Sport Stars Gallery</h1>
+    <p>Explore famous players from different sports!</p>
   </header>
 
-  <div class="container">
-    <h2>Our Model Wearing Jewelry</h2>
+  <nav>
+    <button onclick="showSection('cricket')">Cricket</button>
+    <button onclick="showSection('football')">Football</button>
+    <button onclick="showSection('badminton')">Badminton</button>
+  </nav>
 
-    <img
-      class="model"
-      src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
-      alt="Girl wearing jewelry"
-    >
+  <!-- Cricket Section -->
+  <div id="cricket" class="section active">
+    <h2>Cricket Legends 🏏</h2>
+    <div class="player">
+      <h3>Chamika Karunaratne</h3>
+      <p>Sri Lankan Cricketer and athlete known for multi-sport talent. :contentReference[oaicite:1]{index=1}</p>
+    </div>
+    <div class="player">
+      <h3>Ted Pickett</h3>
+      <p>Australian multi-sport athlete who also played representative cricket. :contentReference[oaicite:2]{index=2}</p>
+    </div>
+  </div>
 
-    <h2>Jewelry Collection</h2>
+  <!-- Football Section -->
+  <div id="football" class="section">
+    <h2>Football Stars ⚽</h2>
+    <div class="player">
+      <h3>Chuni Goswami</h3>
+      <p>Indian football legend who captained his national team. :contentReference[oaicite:3]{index=3}</p>
+    </div>
+    <div class="player">
+      <h3>Example Footballer</h3>
+      <p>Add any players you like!</p>
+    </div>
+  </div>
 
-    <div class="jewelry-list">
-      <div class="item" onclick="showMessage('Earrings')">
-        <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638">
-        <p>Earrings</p>
-      </div>
-
-      <div class="item" onclick="showMessage('Locket')">
-        <img src="https://images.unsplash.com/photo-1602526216432-77f9f47f76f7">
-        <p>Locket</p>
-      </div>
-
-      <div class="item" onclick="showMessage('Necklace')">
-        <img src="https://images.unsplash.com/photo-1605106702842-01a887a31122">
-        <p>Necklace</p>
-      </div>
+  <!-- Badminton Section -->
+  <div id="badminton" class="section">
+    <h2>Badminton Greats 🏸</h2>
+    <div class="player">
+      <h3>P. V. Sindhu</h3>
+      <p>One of India’s top badminton players, world champion and Olympic medallist. :contentReference[oaicite:4]{index=4}</p>
+    </div>
+    <div class="player">
+      <h3>Prakash Padukone</h3>
+      <p>Former world No.1 and winner of the All-England Open. :contentReference[oaicite:5]{index=5}</p>
     </div>
   </div>
 
   <footer>
-    © 2026 Elegant Jewelry 💖
+    ⚽🏏🏸 Explore Sports | Powered by You!
   </footer>
 
   <script>
-    function showMessage(item) {
-      alert(item + " selected 💎");
+    function showSection(id) {
+      // hide all sections
+      document.querySelectorAll('.section').forEach(sec => {
+        sec.classList.remove('active');
+      });
+      // show the selected
+      document.getElementById(id).classList.add('active');
     }
   </script>
 
