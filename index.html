@@ -1,177 +1,142 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Shine Jewelry Store</title>
+  <title>Sport Stars 🌟</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #fff1eb, #ace0f9);
-    }
-
-    header {
-      background: linear-gradient(to right, #ff758c, #ff7eb3);
-      color: white;
-      padding: 25px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: white;
-      padding: 12px;
-      text-align: center;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #ff4f81;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    nav a:hover {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ade6ff, #ffd3e0);
       color: #333;
     }
 
-    .container {
-      padding: 30px;
+    header {
+      background: #ff5757;
+      color: white;
+      text-align: center;
+      padding: 25px;
     }
 
-    .category {
-      margin-bottom: 40px;
+    nav {
+      padding: 12px;
+      background: white;
+      text-align: center;
+      border-bottom: 2px solid #ddd;
     }
 
-    .category h2 {
-      color: #ff4f81;
-      margin-bottom: 15px;
+    nav button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      background: #ff758c;
+      color: #fff;
+    }
+
+    nav button:hover {
+      background: #ff4f6b;
+    }
+
+    .section {
+      display: none;
+      padding: 20px;
       text-align: center;
     }
 
-    .products {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
+    .active {
+      display: block;
     }
 
-    .card {
-      background-color: white;
-      width: 230px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .card p {
-      text-align: center;
-      padding: 10px;
-      font-weight: bold;
-      color: #444;
+    .player {
+      margin: 15px;
+      padding: 15px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      display: inline-block;
+      width: 250px;
     }
 
     footer {
-      background-color: #ff758c;
+      background: #ff5757;
       color: white;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+      padding: 12px;
+      margin-top: 20px;
     }
+
   </style>
+
 </head>
 <body>
 
   <header>
-    <h1>💎 Shine Jewelry Store</h1>
-    <p>Elegant • Colorful • Timeless</p>
+    <h1>🏆 Sport Stars Gallery</h1>
+    <p>Explore famous players from different sports!</p>
   </header>
 
   <nav>
-    <a href="#male">Male</a>
-    <a href="#female">Female</a>
-    <a href="#earrings">Earrings</a>
-    <a href="#necklace">Necklace</a>
+    <button onclick="showSection('cricket')">Cricket</button>
+    <button onclick="showSection('football')">Football</button>
+    <button onclick="showSection('badminton')">Badminton</button>
   </nav>
 
-  <div class="container">
-
-    <!-- Male -->
-    <div class="category" id="male">
-      <h2>Men's Jewelry</h2>
-      <div class="products">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6">
-          <p>Men's Ring</p>
-        </div>
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a">
-          <p>Bracelet</p>
-        </div>
-      </div>
+  <!-- Cricket Section -->
+  <div id="cricket" class="section active">
+    <h2>Cricket Legends 🏏</h2>
+    <div class="player">
+      <h3>Chamika Karunaratne</h3>
+      <p>Sri Lankan Cricketer and athlete known for multi-sport talent. :contentReference[oaicite:1]{index=1}</p>
     </div>
-
-    <!-- Female -->
-    <div class="category" id="female">
-      <h2>Women's Jewelry</h2>
-      <div class="products">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb">
-          <p>Diamond Ring</p>
-        </div>
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f">
-          <p>Gold Bracelet</p>
-        </div>
-      </div>
+    <div class="player">
+      <h3>Ted Pickett</h3>
+      <p>Australian multi-sport athlete who also played representative cricket. :contentReference[oaicite:2]{index=2}</p>
     </div>
+  </div>
 
-    <!-- Earrings -->
-    <div class="category" id="earrings">
-      <h2>Earrings</h2>
-      <div class="products">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638">
-          <p>Stud Earrings</p>
-        </div>
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
-          <p>Hoop Earrings</p>
-        </div>
-      </div>
+  <!-- Football Section -->
+  <div id="football" class="section">
+    <h2>Football Stars ⚽</h2>
+    <div class="player">
+      <h3>Chuni Goswami</h3>
+      <p>Indian football legend who captained his national team. :contentReference[oaicite:3]{index=3}</p>
     </div>
-
-    <!-- Necklace -->
-    <div class="category" id="necklace">
-      <h2>Necklaces</h2>
-      <div class="products">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1605106702842-01a887a31122">
-          <p>Pearl Necklace</p>
-        </div>
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1602526216432-77f9f47f76f7">
-          <p>Gold Necklace</p>
-        </div>
-      </div>
+    <div class="player">
+      <h3>Example Footballer</h3>
+      <p>Add any players you like!</p>
     </div>
+  </div>
 
+  <!-- Badminton Section -->
+  <div id="badminton" class="section">
+    <h2>Badminton Greats 🏸</h2>
+    <div class="player">
+      <h3>P. V. Sindhu</h3>
+      <p>One of India’s top badminton players, world champion and Olympic medallist. :contentReference[oaicite:4]{index=4}</p>
+    </div>
+    <div class="player">
+      <h3>Prakash Padukone</h3>
+      <p>Former world No.1 and winner of the All-England Open. :contentReference[oaicite:5]{index=5}</p>
+    </div>
   </div>
 
   <footer>
-    © 2026 Shine Jewelry | Designed with 💖
+    ⚽🏏🏸 Explore Sports | Powered by You!
   </footer>
+
+  <script>
+    function showSection(id) {
+      // hide all sections
+      document.querySelectorAll('.section').forEach(sec => {
+        sec.classList.remove('active');
+      });
+      // show the selected
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
