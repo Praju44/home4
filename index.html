@@ -1,1 +1,177 @@
-</h1>    My nameis Praju Bhusal   </h1> 
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shine Jewelry Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fff1eb, #ace0f9);
+    }
+
+    header {
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: white;
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #ff4f81;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      color: #333;
+    }
+
+    .container {
+      padding: 30px;
+    }
+
+    .category {
+      margin-bottom: 40px;
+    }
+
+    .category h2 {
+      color: #ff4f81;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .products {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: white;
+      width: 230px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card p {
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    footer {
+      background-color: #ff758c;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>💎 Shine Jewelry Store</h1>
+    <p>Elegant • Colorful • Timeless</p>
+  </header>
+
+  <nav>
+    <a href="#male">Male</a>
+    <a href="#female">Female</a>
+    <a href="#earrings">Earrings</a>
+    <a href="#necklace">Necklace</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- Male -->
+    <div class="category" id="male">
+      <h2>Men's Jewelry</h2>
+      <div class="products">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6">
+          <p>Men's Ring</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a">
+          <p>Bracelet</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Female -->
+    <div class="category" id="female">
+      <h2>Women's Jewelry</h2>
+      <div class="products">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb">
+          <p>Diamond Ring</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f">
+          <p>Gold Bracelet</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Earrings -->
+    <div class="category" id="earrings">
+      <h2>Earrings</h2>
+      <div class="products">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638">
+          <p>Stud Earrings</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
+          <p>Hoop Earrings</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Necklace -->
+    <div class="category" id="necklace">
+      <h2>Necklaces</h2>
+      <div class="products">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1605106702842-01a887a31122">
+          <p>Pearl Necklace</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1602526216432-77f9f47f76f7">
+          <p>Gold Necklace</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 Shine Jewelry | Designed with 💖
+  </footer>
+
+</body>
+</html>
